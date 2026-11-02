@@ -30,8 +30,8 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="apple-mobile-web-app-title" content="Bocaditos">
 <link rel="manifest" href="/manifest.webmanifest">
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=1793583463701">
-<link rel="apple-touch-icon-precomposed" sizes="180x180" href="/apple-touch-icon.png?v=1793583463701">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=1793584505490">
+<link rel="apple-touch-icon-precomposed" sizes="180x180" href="/apple-touch-icon.png?v=1793584505490">
 <link rel="icon" type="image/png" sizes="192x192" href="/icon-192.png">
 <meta name="description" content="Tu diario de comidas: contá lo que comés, puntuá lugares, seguí a tus amigos y cuidá a tu mascota.">
 <meta property="og:type" content="website">
@@ -116,8 +116,9 @@ input,textarea,[contenteditable]{-webkit-user-select:text;user-select:text;-webk
     if (!/safari/i.test(ua) || /crios|fxios|instagram|fban|fbav/i.test(ua)) note.textContent = "Si no ves esa opción, abrí este link en Safari.";
   } else {
     li("Tocá el menú <b>⋮</b> arriba a la derecha");
-    li("Elegí <b>Agregar a pantalla principal</b> o <b>Instalar app</b>");
+    li("Elegí <b>Instalar app</b> (o <b>Agregar a pantalla principal</b> → <b>Instalar</b>)");
     li("Abrí Bocaditos <b>desde el ícono</b>");
+    note.textContent = "Si te ofrece \"Crear acceso directo\", no: elegí Instalar. Así se abre como app, sin el link arriba.";
   }
   window.addEventListener("beforeinstallprompt", function (e) {
     e.preventDefault(); deferred = e;

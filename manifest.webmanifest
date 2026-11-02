@@ -5,10 +5,13 @@
   "lang": "es-AR",
   "start_url": "/",
   "scope": "/",
+  "id": "/",
   "display": "standalone",
-  "display_override": [
-    "fullscreen",
-    "standalone"
+  "prefer_related_applications": false,
+  "categories": [
+    "food",
+    "social",
+    "lifestyle"
   ],
   "orientation": "portrait",
   "background_color": "#0E0B15",
