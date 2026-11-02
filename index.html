@@ -30,8 +30,8 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="apple-mobile-web-app-title" content="Bocaditos">
 <link rel="manifest" href="/manifest.webmanifest">
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=1793584653915">
-<link rel="apple-touch-icon-precomposed" sizes="180x180" href="/apple-touch-icon.png?v=1793584653915">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=1793584696386">
+<link rel="apple-touch-icon-precomposed" sizes="180x180" href="/apple-touch-icon.png?v=1793584696386">
 <link rel="icon" type="image/png" sizes="192x192" href="/icon-192.png">
 <meta name="description" content="Tu diario de comidas: contá lo que comés, puntuá lugares, seguí a tus amigos y cuidá a tu mascota.">
 <meta property="og:type" content="website">
@@ -114,6 +114,12 @@ input,textarea,[contenteditable]{-webkit-user-select:text;user-select:text;-webk
     li("Elegí <b>Agregar a inicio</b>");
     li("Abrí Bocaditos <b>desde el ícono</b>");
     if (!/safari/i.test(ua) || /crios|fxios|instagram|fban|fbav/i.test(ua)) note.textContent = "Si no ves esa opción, abrí este link en Safari.";
+  } else if (/samsungbrowser/i.test(ua)) {
+    // Samsung Internet: el botón de instalar es el ícono ⬇ al lado del link, o el menú ≡ de abajo
+    li("Tocá el ícono <b>⬇</b> que está arriba, al lado del link");
+    li("Elegí <b>Instalar</b> o <b>Agregar a pantalla de inicio</b>");
+    li("Abrí Bocaditos <b>desde el ícono</b>, no desde el navegador");
+    note.textContent = "Si no ves el ⬇: tocá ⋮ abajo a la derecha → Agregar página a → Pantalla de inicio.";
   } else {
     li("Tocá el menú <b>⋮</b> arriba a la derecha");
     li("Elegí <b>Instalar app</b> (o <b>Agregar a pantalla principal</b> → <b>Instalar</b>)");
